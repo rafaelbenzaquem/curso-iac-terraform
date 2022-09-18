@@ -2,7 +2,7 @@
   tasks:
     - name: criando index.html
       copy:
-        dest: /homem/ubuntu/index.html
+        dest: /home/ubuntu/index.html
         content: <h1>Feito com terraform e ansible</h1>
     - name: executando o servidor
       shell: "nohup busybox httpd -f -p 8080 &"
