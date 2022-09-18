@@ -40,3 +40,8 @@ EOF
 #3 - configurar security group com regras de entrada e saida para ipv4 e ipv6
 #3 - acessar instância viva cliente ssh
 ## ssh -i "teste-iac-oregon.pem" ubuntu@ec2-52-10-62-48.us-west-2.compute.amazonaws.com
+
+#Aula 4
+#1 - configurando os arquivos para executar o ansible, hosts.yaml e playbook.yaml
+#2 - executando ansible para alterar uma instância ec2 na aws
+##  ansible-playbook playbook.yaml -u ubuntu --private-key teste-iac-oregon.pem -i hosts.yaml
