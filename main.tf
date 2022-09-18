@@ -16,13 +16,21 @@ provider "aws" {
 resource "aws_instance" "app_server" {
   ami           = "ami-0d70546e43a941d70"
   instance_type = "t2.micro"
-
-  tags = {
+  key_name      = "teste-iac-oregon"
+  tags          = {
     Name = "Primeira instancia"
   }
 }
 
+#Aula 1
 #terraform init  // inicia um projeto ioc com terraform
 #terraform plan  // detalha as configurações da infra na nuvem
 #terraform apply // aplica aas configurações da infra na nuvem
 #terraform destroy // limpa as configurações de ioc que foram aplicadas
+
+#Aula 2
+#1 - criar par de chave ssh e associar a instância ec2
+#2 - configurar o objeto resource ao par de chave ssh
+#3 - configurar security group com regras de entrada e saida para ipv4 e ipv6
+#3 - acessar instância viva cliente ssh
+## ssh -i "teste-iac-oregon.pem" ubuntu@ec2-52-10-62-48.us-west-2.compute.amazonaws.com
