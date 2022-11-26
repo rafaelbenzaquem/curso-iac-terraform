@@ -42,6 +42,9 @@ build/
 **/.terraform/*
 
 # par de chaves ssh
+env/dev/iac-dev
+env/prod/iac-prod
+*.pub
 *.pem
 # .tfstate files
 *.tfstate
